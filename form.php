@@ -1,29 +1,24 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = $_POST['name'] ?? '';
-    $email = $_POST['email'] ?? '';
-    $message = $_POST['message'] ?? '';
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $message = $_POST['message'];
 
-    // Basic form validation
-    if (empty($name) || empty($email) || empty($message)) {
-        echo "Please fill in all fields";
-        exit;
-    }
+    // You can perform additional validation or processing here
 
-    // Process the form data (you can add your specific functionality here)
-
-    // Example: Sending an email
-    $to = "sabrina.bridget@outlook.com";
+    // For example, you might send an email with the form data
+    $to = "sabrinasstudio.com@gmail.com"; // Your email address
     $subject = "New Contact Form Submission";
-    $email_body = "Name: $name\nEmail: $email\nMessage: $message";
+    $body = "Name: $name\nEmail: $email\nMessage: $message";
 
-    if (mail($to, $subject, $email_body)) {
-        echo "Email sent successfully";
-        // Redirect after form submission (optional)
-        header("Location: thank-you.html");
-        exit;
-    } else {
-        echo "Email failed to send";
-    }
+    // Set additional headers
+    $headers = "From: $email";
+
+    // Send email
+    mail($to, $subject, $body, $headers);
+
+    // Redirect after submission (optional)
+    header("Location: thank-you.html"); // Replace with your thank-you page
+    exit();
 }
 ?>
