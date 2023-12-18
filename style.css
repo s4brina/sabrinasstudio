@@ -17,7 +17,7 @@ section {
     display: grid;
     place-items: center;
     align-content: center;
-    min-height: 50vh;
+    min-height: 103vh;
 }
 
 /* hidden properties */
@@ -596,4 +596,8 @@ li {
 
       .profile-radius {
         border-radius: 30px;
+      }
+
+      section:nth-child(4) {
+        min-height: 10vh;
       }
