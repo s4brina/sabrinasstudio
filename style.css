@@ -597,7 +597,3 @@ li {
       .profile-radius {
         border-radius: 30px;
       }
-
-      .hidden:nth-child(5) {
-        min-height: 10vh;
-      }
