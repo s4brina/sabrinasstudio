@@ -17,7 +17,7 @@ section {
     display: grid;
     place-items: center;
     align-content: center;
-    min-height: 50vh;
+    min-height: 103vh;
 }
 
 /* hidden properties */
@@ -598,9 +598,6 @@ li {
         border-radius: 30px;
       }
 
-      section:nth-child(5) {
-        display: grid;
-        place-items: center;
-        align-content: center;
+      .hidden:nth-child(5) {
         min-height: 10vh;
       }
