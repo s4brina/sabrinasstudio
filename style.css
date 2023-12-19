@@ -17,7 +17,7 @@ section {
     display: grid;
     place-items: center;
     align-content: center;
-    min-height: 103vh;
+    min-height: 50vh;
 }
 
 /* hidden properties */
@@ -484,7 +484,7 @@ iframe {
         display: grid;
         place-items: center;
         align-content: center;
-        min-height: 10vh;
+        min-height: 103vh;
       }
 
       .hidden {
@@ -598,6 +598,9 @@ li {
         border-radius: 30px;
       }
 
-      section:nth-child(4) {
+      section:nth-child(5) {
+        display: grid;
+        place-items: center;
+        align-content: center;
         min-height: 10vh;
       }
